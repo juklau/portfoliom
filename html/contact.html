@@ -1,0 +1,178 @@
+
+<!DOCTYPE html>
+
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <title>Portfolio de Klaudia JUHASZ</title>
+        <link rel="stylesheet" href="../css/mobilfirst_style.css">
+        <link rel="stylesheet" href="../css/desktop_style.css">
+        <link rel="stylesheet" href="../css/menu_deroulant.css">
+        <link rel="stylesheet" href="../css/mobilfirst_boutons.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>
+
+    <body>
+      
+        <header class="header">
+            <nav class="menu">
+                <div class="head">
+                    <button type="button" class="close-menu-btn"></button>
+                </div>
+                <ul class="fomenupont">
+                    <li><a href="accueil.html"><span>Accueil</span></a></li>
+                    <li class="dropdown">
+                        <div class="icon-link">
+                            <a href="a_propos_de_moi.html"><span class="hely-javitas">A propos</span></a>
+                            <i class="fa-solid fa-circle-chevron-down"></i>
+                        </div>
+                        
+                        <ul class="sub-menu">
+                            <li class="dropdown almenu">
+                                <div class="icon-link">
+                                    <a href="a_propos_de_moi.html"><span>A propos de moi</span></a>
+                                    <i class="fa-solid fa-circle-chevron-down arrow-sub-menu"></i>
+                                </div>
+
+                                <ul class="sub-menu sub-menu-right">
+                                    <li class="dropdown almenu">
+                                        <div class="icon-link">
+                                            <a href="a_propos_de_moi.html#parcours-professionnel"><span>Parcours Professionnel</span></a>
+                                            <i class="fa-solid fa-circle-chevron-down arrow-sub-menu"></i>
+                                        </div>
+                                        
+                                        <ul class="sub-menu sub-menu-right" id="stages">
+                                            <li><a href="presentation_stage_1.html"><span>Stage de première année</span></a></li>
+                                            <li><a href="presentation_stage_2.html"><span>Stage de deuxième année</span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="a_propos_de_moi.html#parcours-scolaires"><span>Parcours scolaires</span></a></li>
+                                </ul>
+                            </li>
+                            <li><a href="a_propos_de_la_formation.html"><span>A propos de la formation</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <div class="icon-link">
+                            <a href="ppe.html"><span class="cim-long">Projets Personnalisés Encadrés</span></a>
+                            <i class="fa-solid fa-circle-chevron-down"></i>
+                        </div>
+                        
+                        <ul class="sub-menu">
+                            <li><a href="page_error_404.html"><span>Application mobile</span></a></li>
+                            <li><a href="page_error_404.html"><span>Plateforme de E-commerce</span></a></li>
+                            <li><a href="page_error_404.html"><span>Système de gestion de Projet</span></a></li>
+                            <li><a href="page_error_404.html"><span>Application de Gestion de Stock et de Facturation</span></a></li>
+                        </ul>
+                    </li>
+                    <li><a href="veille_technologique.html"><span>La Veille Technologique</span></a></li>
+                    <li class="dropdown">
+                        <div class="icon-link">
+                            <a href="gestion_patrimoine_informatique.html"><span class="cim-long">Gestion de patrimoine informatique</span></a>
+                            <i class="fa-solid fa-circle-chevron-down"></i>
+                        </div>
+                        
+                        <ul class="sub-menu">
+                            <li><a href="gestion_patrimoine_informatique.html#GLPI"><span>GLPI</span></a></li>
+                            <li><a href="gestion_patrimoine_informatique.html#OCS-Inventory"><span>OCS Inventory</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <div class="icon-link">
+                            <a href="competences.html"><span class="hely-javitas">Compétences</span></a>
+                            <i class="fa-solid fa-circle-chevron-down"></i>
+                        </div>
+                        
+                        <ul class="sub-menu">
+                            <li><a href="competences.html#langages-pratiqués"><span>Langages Pratiqués</span></a></li>
+                            <li><a href="competences.html#carousel"><span>Outils/Logiciels utilisés</span></a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html"><span>Contact</span></a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                <button type="button" class="open-menu-btn">
+                    <span class="line line-1"></span>
+                    <span class="line line-2"></span>
+                    <span class="line line-3"></span>
+                </button>
+            </div>
+    </header>
+
+        <div class="oldal-fejlec-contact">
+            <h1>Contact</h1>
+         </div>
+
+        <div id="remplir">
+            <p>Veuillez remplir ce formulaire pour me contacter</p>
+        </div>
+
+        <section id="main-contact">
+            <form action="https://formspree.io/f/xaneaygb" method="POST" id="contact-form">
+                <div>
+                    <input type="text" id="nom" name="nom" placeholder="Votre nom *" required>
+                    <small id="small-nom"></small>
+                </div>
+                
+
+                <input type="text" id="prenom" name="prenom" placeholder="Votre prénom *" required>
+                <small></small>
+
+                <input type="email" id="email" name="email" placeholder="Votre email *" required>
+                <small></small>
+
+                <input type="text" id="sujet" name="sujet" placeholder="Sujet *" required>
+                <small></small>
+
+                <textarea id="message" name="message" placeholder="Votre message *" required></textarea>
+                <small></small>
+
+                <div class="obligatoire">
+                    <p>* Champ Obligatoire</p>
+                </div>
+
+                <div class="costum-check">
+                    <input type="checkbox" id="egyetertes" name="egyetertes">
+                    <label for="egyetertes" id="check-label">J'accepte que mes données servent uniquement à me recontacter.</label>
+                    <label for="egyetertes"><a href="mentions_legales.html"><span>(Voir Mentions Légales)</span></a></label>
+                </div>
+            
+                <div class="boutons">
+                    <button class="decouvrir" id="envoyer" type="submit">Envoyer</button>
+                </div>
+             </form>
+        </section>
+    </body>
+    
+    <footer>
+        <div>
+            <i class="fa-regular fa-copyright"></i><span>Copyright 2025</span> 
+        </div>
+
+        <div>
+            <strong><span>Designed by Klaudia Juhasz</span></strong>
+        </div>
+
+        <div class="icons">
+            <a href="https://www.linkedin.com/in/klaudia-juhasz-a165002bb/" target="_blank"><i class="fa-brands fa-linkedin fa-2xl"></i></a>
+            <a href="page_error_404.html"><i class="fa-brands fa-github fa-2xl"></i></a>
+        </div>
+
+        <div class="container-footer">
+            <div>
+                <a href="contact.html"><span>Contact</span></a>
+            </div>
+            <div>
+                <a href="mentions_legales.html"><span>Mentions légals</span></a>
+            </div>
+            <div>
+                <a href="plan_du_site.html"><span>Plan du site</span></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- link de script  -->
+    <script src="../js/portfolio.js"></script>
+    <script src="../js/contact.js"></script>
+</html>

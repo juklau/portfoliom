@@ -1,0 +1,137 @@
+
+/* ======================================================================================== */
+/*                              Page d'erreur et du plan du site*/
+/* ======================================================================================== */
+
+
+.main-content.plan-site,
+.main-content.error-page{
+    margin-top: 100px;
+    margin-bottom: 50px;
+    color: rgb(55, 52, 52);
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenu{
+    padding: 2rem;
+    margin: auto;
+    display: grid;
+}
+
+.fejlec{
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.fejlec h1{
+    font-size: 4rem;
+    font-weight: 900;
+}
+
+.contenu h3,
+.contenu h2{
+    margin-top: 20px;
+    font-weight: 900;
+}
+
+
+
+.explication{
+    /* grid= grille permet d'aligner des éléments sous forme de colonnes et de lignes 
+    mais à la différence des tableaux,
+     la grille n'a pas de structure de contenu. */
+    display: grid;
+    /* pour définir les espaces entre lignes et colonnes */
+    gap: 2rem;
+    /* prendre en charge les 2 propriétés d'alignement:
+       --align-content 
+       --justify-content */
+    place-content: baseline;
+}
+
+
+/* =========================================================================================== */
+/*                                       Page du plan du site */
+/* =========================================================================================== */
+
+
+/* je n'ai pas fait des classes exprès afin de pouvoir m'entrainer avec "parent-enfant" */
+
+.pages-liste{
+    padding-left: 30px;
+}
+
+.pages-liste ul{
+    list-style: none;   
+}
+
+.pages-liste ul a{
+    line-height: 1.5em;
+}
+
+.pages-liste ul a:hover{
+    color: white;
+}
+
+.pages-liste ul li{
+    padding-left: 20px;
+}
+
+.pages-liste>ul>li>a{
+    color: black;
+}
+
+.pages-liste>ul>li>ul>li>a{
+    color: rgb(99, 7, 99);
+}
+
+.pages-liste>ul>li>ul>li>ul>li>a{
+    color: #D6AD4F;
+}
+
+.pages-liste>ul>li>ul>li>ul>li>ul>li>a{
+    color: #6c4420;
+}
+
+
+/* ============================================================================================= */
+/*                              Page de Mentions légales */
+/* ============================================================================================= */
+
+.main-content.mentions{
+    margin-top: 100px;
+}
+
+.mentions-elements h2{
+    text-align: center;
+    margin: 60px 0 60px 0;
+}
+
+.mentions-elements p::first-letter{
+    margin-left: 20px;
+}
+
+.mentions-elements p{
+    line-height: 2;
+}
+
+.mentions-elements p span{
+    font-weight: 900;
+    font-style: italic;
+}
+
+.mentions-elements a{
+    color: rgba(215, 210, 48, 1);
+}
+
+.mentions-elements a:hover{
+    color: rgb(151, 147, 35);
+}
+
+.mentions-elements:last-of-type{
+    margin-bottom: 100px;
+}

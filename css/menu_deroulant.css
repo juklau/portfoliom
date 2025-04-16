@@ -1,0 +1,456 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap');
+
+
+/*********************************************************************************************
+                                   MOBILFIRST
+**********************************************************************************************/
+
+
+.header{
+    padding-top: 10px;
+    min-width: 375px;
+    height: 100px;
+    width: 100%;
+    background-color: black;
+    position: relative;
+    display:block;
+    align-items: center;
+    /* justify-items: flex-start; */
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.fomenupont{
+    margin-top: 20px;
+}
+
+.header .menu{
+    position: fixed;
+    left: 0; /* afin d'être sur le côté gauche*/
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background-color: black;
+    padding-left: 15px;
+    padding-right: 5px;
+    /* overflow: auto; */
+    z-index: 1;
+    transform: translateX(-100%); /* afin de glisser vers l'intérieur du côté gauche*/ 
+}
+
+.header .menu.open{
+    transform: none;
+    padding-left: 30px;
+}
+
+.header .menu .head{
+    display: flex;
+    margin-top: 20px;
+}
+
+.header .menu ul{
+    list-style: none;
+}
+
+.header .menu li{
+    display: flex;
+    border-bottom: 1px solid gray;
+}
+
+.header .menu a{
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 14px;
+    color: white;
+    line-height: 1.5;
+    display: inline-flex;
+    align-items: center;  
+}
+
+/***************************************** arrow-icons **********************************************/
+.header .menu i{
+    height: 36px;
+    width: 36px; 
+    display: inline-flex;
+    pointer-events: auto;
+    cursor: pointer;
+    color: white;
+    margin-left: 20px;
+    align-items: center;
+    /* lehet hogy nem kell */
+    /* padding: 15px 0; */ 
+}
+
+.fomenupont .dropdown .sub-menu .dropdown .icon-link i{
+    transform: rotate(-90deg);
+    justify-content: center;
+}
+
+/********* click sur arrow-icon *******/
+.header .menu .dropdown.active  i{
+    background-color: black;
+    transform: rotate(180deg);
+}
+
+/************************************ Affichage des sous-menus ***************************************/
+.header .menu .dropdown{
+    position: relative;
+    display:flex;
+    flex-direction: column;
+}
+
+.header .menu .sub-menu{
+    position: static;
+    background-color: black;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    padding: 0;
+    transition: none;
+    box-shadow: none;
+    width: 100%;
+    display: none;
+}
+
+.icon-link {
+    display: flex;
+}
+
+/* ez nem biztos hogy kell */
+/* .header .menu > ul > li{
+    display: block;
+} */
+
+/* ez nem biztos hogy kell */
+/* .header .menu > ul > li::not(:last-child){
+    margin-right: 0;
+} */
+
+/**************************** souligne pendant le survole ****************************/
+.header .menu .fomenupont span,
+.header .menu .sub-menu span{
+    background-image: linear-gradient(hsl(0, 0%, 100%), hsl(0, 0%, 100%));
+    background-size: 0 1px;
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    transition: background-size 0.5s ease;
+}
+
+.header .menu .fomenupont li:hover > a > span,
+.header .menu .fomenupont li:hover > .icon-link > a > span,
+.header .menu .sub-menu li:hover > a > span,
+.header .menu .sub-menu li:hover > .icon-link > a > span{
+    background-size: 100% 1px;
+}
+
+.cim-long{
+    padding: 5px 0;
+}
+
+/* lehet hogy nem kell */
+/* .header .menu .sub-menu .icon-link i{
+    transform: rotate(-90deg);
+    right: 5px;
+} */
+
+/* .header .menu li:first-child{
+    border-top: 1px solid gray;
+} */
+
+/* lehet hogy ez nem kell */
+.header .menu > ul > li > a{
+    padding: 10px 0;
+}
+
+/* lehet hogy nem kell */
+.header .menu > ul > .dropdown > a{
+    padding-right: 20px;
+} 
+
+.header .menu .dropdown.active > .sub-menu{
+    display: inline;
+}
+
+.header .menu .sub-menu li:last-child{
+    border: none;
+}
+
+.header .menu .sub-menu a{
+    padding: 10px 0 7px 10px;
+}
+
+.header .menu .sub-menu .sub-menu a{
+    padding-left: 25px;
+}
+
+.header .menu .sub-menu .sub-menu .sub-menu a{
+    padding-left: 40px;
+}
+
+
+/**********************************************************************************************
+                                            Boutons de menu
+**********************************************************************************************/
+
+/************************************ btn-close du menu **************************************/
+.header .menu .close-menu-btn{
+    height: 25px;
+    width: 25px;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    margin-right: 15px;
+}
+
+.header .menu .close-menu-btn::before,
+.header .menu .close-menu-btn::after{
+    content: '';
+    position: absolute;
+    width: 80%;
+    height: 2px;
+    background-color: white;
+}
+
+.header .menu .close-menu-btn::before{
+    transform: rotate(45deg);
+}
+
+.header .menu .close-menu-btn::after{
+    transform: rotate(-45deg);
+}
+
+
+/***************************************** open-btn du menu ***************************************/
+
+.header-right > *{
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+.header-right .open-menu-btn{
+    display: none;
+}
+
+.header-right .open-menu-btn{
+    display: flex;
+    align-items: center;
+    /* justify-items: flex-start; */
+    height: 35px;
+    width: 35px;
+    cursor: pointer;
+    position: relative;
+    background-color: transparent;
+    border: none;
+}
+
+.header-right .open-menu-btn .line{
+    height: 3px;
+    width: 30px;
+    background-color: white;
+    position: absolute;
+    margin-left: 20px;
+}
+
+.header-right .open-menu-btn .line-1{
+    transform: translateY(-8px);
+}
+
+.header-right .open-menu-btn .line-3{
+    transform: translateY(8px);
+}
+
+
+/*********************************************************************************************
+                                    DESKTOP
+**********************************************************************************************/
+
+
+@media(min-width:768px){
+   
+
+    .header{
+        left: 0;
+        top: 0;
+        width: 100%;
+        /* height: 150px; */
+        /* position: absolute; */
+        display: flex;
+        /* flex-wrap: wrap; */
+        z-index: 9999999;
+        justify-content:space-around;
+        border-bottom: 1px solid gray;
+        /* overflow: hidden;  ha ezt berakom, akkor nem jelenik meg !!!*/
+        padding: 10px 0;
+    }
+
+    .header .menu{
+        position: absolute;
+        transform: translateX(0);
+        width: 100%;
+        height: 150px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-top: 20px;
+        padding: 0 15px;
+    }
+
+    .fomenupont{
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .header .menu ul{
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+    }
+
+    .cim-long{
+        text-align: center;
+    }
+
+    .header .menu li{
+        border-bottom: none;
+        margin-left: 15px;
+    }
+
+    .header .menu > ul > li{
+        display: inline-block;
+        width: 100px;
+    }
+
+    header .menu > ul > li:first-child,
+    header .menu > ul > li:nth-child(4),
+    header .menu > ul > li:last-child{
+        margin-left: 0;
+        text-align: center;
+    }
+    
+    /* header .menu > li:nth-of-type(1n+3){
+        text-align: center;
+    } */
+
+   
+    .header .menu .dropdown{
+        position: relative;
+        width: 100px;
+    }
+
+    /* définir l'emplacement du menu principal */
+    .header .menu > ul > li > a{
+        padding-top: 24px;
+        padding-bottom: 12px;
+    }
+
+    .header .menu i{
+        pointer-events: none;
+        user-select: none;
+        margin-left: 10px;
+        margin-top: 15px;
+        /* top: calc(50% - 5px); */
+    }
+
+    .hely-javitas {
+        margin-top: 15px;
+    }
+
+    
+    /******************************** cacher par defaut les sub-menus ****************************/
+    .header .menu .sub-menu{
+        position: absolute;
+        display: block;
+        top: 100%;
+        margin-top: -55px;
+        left: 0;
+        width: 150px;
+        padding: 10px 0; /* hogy legyen szintkulonbseg */
+        background-color: black; /*lehet hogy nem kell*/
+        box-shadow: 0 0 5px white;
+        z-index: 999999; /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! pour afficher dessus!!!!??? */
+        transform-origin: top; /* point d'origine pour l'animation */
+        transform: scaleY(0); /* masquer verticalement */
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.5s ease;
+    }
+
+    /*************************** cacher par defaut les sub-menu-right ********************************/
+    .header .menu .sub-menu-right{
+        position: absolute;
+        margin-top: 15px;
+        top: 0;
+        left: 100%;
+        transform-origin: left;
+        transform: scaleX(0); /* masquer horizontalement */
+    }
+
+    .almenu{
+        min-width: 140px;
+    }
+
+    .arrow-sub-menu{
+        margin-bottom: 10px;
+    }
+
+    /******************************* pour appataître les "sub-menus" *******************************/
+    .header .menu .dropdown:hover > .sub-menu{
+        opacity: 1;
+        visibility: visible;
+        transform: scaleY(1);
+    }
+
+    .header .menu .dropdown:hover > .sub-menu-right{
+        opacity: 1;
+        visibility: visible;
+        transform: scaleX(1); 
+        /* margin-left: 35px; */
+    }
+
+    /* former le contenu des sub-menus en différent niveau */
+    .header .menu .sub-menu a{
+        padding: 7px 0 7px 5px;
+    }
+
+    .header .menu .sub-menu .sub-menu a,
+    .header .menu .sub-menu .sub-menu .sub-menu a{
+        padding-left: 5px;
+    }
+
+    #stages{
+        margin-top: 20px;
+    }
+
+     /* cacher le bouton de fermeture -ouverture */
+     .header .menu .head{
+        display: none;
+    }
+
+    .header-right .open-menu-btn{
+        display: none;
+    }
+
+}
+
+@media(min-width:900px){
+
+    .header{
+        max-width: 1240px;
+        margin: auto;
+    }
+
+    .fomenupont{
+        gap: 1.5rem;
+    }
+
+   
+
+    .header .menu a {
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,1210 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap');
+
+
+/* ================================================================================================= */
+/*                                      Pour tous les pages */
+/* ================================================================================================= */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+
+
+/* ================================================================================================ */
+/*                                      Les couleurs des pages */
+/* ================================================================================================*/
+
+html {
+    background-color: black;
+    color: white;
+}
+
+.propos-moi-html {
+    background-color: rgba(2, 0, 40, 1);
+}
+
+.veille-html {
+    background-color: rgb(3, 13, 70);
+}
+
+.patrimoine-html {
+    background-color: rgba(11, 29, 61, 1);
+}
+
+.plan_du_site-html,
+.error-html{
+    background-color: rgba(25, 158, 157, 1);
+}
+
+
+/* ================================================================================================ */
+/*                                              Body*/
+/* ================================================================================================ */
+
+body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+
+/* =============================================================================================== */
+/*                                               Textes*/
+/* =============================================================================================== */
+
+/************************************ h1 de chaque page *******************************************/
+
+.oldal-fejlec-accueil h1,
+.oldal-fejlec-propos-moi h1,
+.oldal-fejlec-formation h1,
+.oldal-fejlec-ppe h1,
+.oldal-fejlec-veille-technologique h1,
+.oldal-fejlec-competences h1,
+.oldal-fejlec-patrimoine-informatique h1,
+.oldal-fejlec-contact h1{
+    text-align: center;
+    color: white;
+    font-size: 36px;
+    font-weight:900; 
+}
+
+.oldal-fejlec-ppe{
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.oldal-fejlec-veille-technologique h1{
+    color: rgb(210, 186, 92);
+    margin-top: 10px;
+    margin-left: 100px;
+}
+
+.oldal-fejlec-patrimoine-informatique h1{
+    background: linear-gradient(180deg, white 20%, rgb(223, 234, 104) 50%, rgba(200, 214, 50, 1) 50%);
+    -webkit-background-clip: text;
+    color: transparent;
+    padding-top: 20px;
+}
+
+.oldal-fejlec-contact h1{
+    justify-content: flex-start;
+    margin-top: 50px;
+}
+
+p {
+    font-size: 13px;
+}
+
+.description p {
+    margin-top: -15px;
+}
+
+/* sorbekezdes paragrafusonkent */
+.description p::first-letter{
+    margin-left: 20px;
+}
+
+/********************* sur la page gestion_patrimoine_informatique *********************************/
+
+.description .glpi-ocs > p::first-letter{
+    margin-left: 0;
+}
+
+.url-link {
+    font-style: italic;
+    text-decoration: underline;
+}
+
+ul li {
+    font-size: 13px;
+}
+
+.veille-html {
+    color: black;
+}
+
+
+/* ================================================================================================ */
+/*                                               Images*/
+/* ================================================================================================ */
+
+.oldal-fejlec-accueil,
+.oldal-fejlec-propos-moi,
+.oldal-fejlec-formation,
+.oldal-fejlec-ppe,
+.oldal-fejlec-veille-technologique,
+.oldal-fejlec-competences,
+.oldal-fejlec-patrimoine-informatique,
+.veille-sujet,
+.oldal-fejlec-contact,
+.oldal-fejlec-mentions-legales{
+    position: relative;
+     /* novelni a magassagot es a szelesseget, amikor majd szelesitem a kepernyot */
+    width: 100%;
+    min-height: 350px;
+    object-fit: cover;
+    object-position: center;
+    /* height: 437px; */
+    background-image: url("../images_portfolio/background1.jpg");
+    background-repeat: no-repeat;
+    /* background-position-y: -39px; */
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+    /* margin-block-start: 80px; */
+    margin-bottom: 50px;
+
+    /* afin d'image d'arrière-plan soit au centre et fixe sa taille quelle que soit 
+    la modification de la taille du div:
+    bon pour les petites, grandes, tailles normales, */
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;
+}
+
+.oldal-fejlec-propos-moi{
+    background-image: url("../images_portfolio/background2.jpg");
+}
+
+.oldal-fejlec-formation{
+    background-image: url("../images_portfolio/background3.jpg");
+}
+
+.oldal-fejlec-ppe{
+    background-image: url("../images_portfolio/background4.jpg");
+}
+
+.oldal-fejlec-veille-technologique{ 
+    background-image: url("../images_portfolio/background5.jpg");
+    justify-content: flex-start;
+}
+
+.oldal-fejlec-patrimoine-informatique{
+    justify-content: flex-start;
+    background-image: url("../images_portfolio/background6.jpg");
+}
+
+.oldal-fejlec-competences{
+    background-image: url("../images_portfolio/background7.jpg");
+}
+
+.oldal-fejlec-contact{
+    background-image: url("../images_portfolio/background8.jpg");
+    justify-content: flex-start;
+}
+
+.oldal-fejlec-mentions-legales{
+    background-image: url("../images_portfolio/mentions-legales3.png");
+} 
+
+.veille-sujet{
+    background-image: url("../images_portfolio/accessibilité3_1.png");
+    margin-top: 0;
+    /* margin-block-start: 50px; */
+    margin-bottom: 70px;
+    padding-bottom: 30px;
+}
+
+#image-text-patrimoine{
+    background: linear-gradient(180deg, white 20%, rgb(223, 234, 104) 35%, rgba(200, 214, 50, 1) 50%);
+    -webkit-background-clip: text;
+    margin-top: -70px;
+    color: transparent;
+    min-width: 375px;
+}
+
+#image-contact{
+    margin-top: 80px;
+    transform:rotate(180deg);
+    background-color: black;
+}
+
+
+/********************************* afficher les sources de chaque image ****************************/
+
+.oldal-fejlec-accueil::after,
+.oldal-fejlec-propos-moi::after,
+.oldal-fejlec-formation::after,
+.oldal-fejlec-ppe::after,
+.oldal-fejlec-veille-technologique::after,
+.oldal-fejlec-patrimoine-informatique::after,
+.oldal-fejlec-competences::after,
+.oldal-fejlec-contact::after{
+    content: "source: https://fr.freepik.com/";
+    position: absolute;
+    top: 93%; 
+    left: 75%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 0.8em;
+    font-weight: bold;
+    /*text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); *//* Ombre pour une meilleure lisibilité */
+    opacity: 0; 
+    transition: opacity 1.4s ease; /* Effet de transition pour l'apparition */
+    z-index: 1;
+    margin-left: 50px;
+}
+
+.oldal-fejlec-propos-moi::after,
+.oldal-fejlec-formation::after{
+    content: "source: https://fr.pngtree.com";
+}
+
+.oldal-fejlec-ppe::after{
+    font-size: 0.5em;
+}
+
+.oldal-fejlec-veille-technologique::after{
+    content: "source: https://fr.pinterest.com/";
+}
+
+.oldal-fejlec-patrimoine-informatique::after{
+    content: "source: https://0xstarlight.github.io/";
+}
+
+.oldal-fejlec-competences::after{
+    content: "source: https://wallhere.com/";
+}
+
+.oldal-fejlec-accueil:hover::after,
+.oldal-fejlec-propos-moi:hover::after,
+.oldal-fejlec-formation:hover::after,
+.oldal-fejlec-ppe:hover::after,
+.oldal-fejlec-veille-technologique:hover::after,
+.oldal-fejlec-patrimoine-informatique:hover::after,
+.oldal-fejlec-competences:hover::after,
+.oldal-fejlec-contact:hover::after{
+    opacity: 0.5;
+}
+
+/************************************** AUTRE IMAGES **********************************************/
+
+/************************************* a propos de moi ********************************************/
+#moi {
+    width: 35%;
+    min-width: 100px;
+    max-width: 140px;
+    margin: auto;
+    margin: 1em 0 0.5em 0.5em;
+    float: right;
+    border-radius: 50%;
+    border: 5px solid rgba(57, 27, 91, 1);
+    box-shadow: 5px -5px 10px 0px rgba(57, 27, 91, 1), -5px 5px 10px 0px rgba(57, 27, 91, 1);
+    position: relative;
+    z-index: 10;
+}
+
+/********************************** a propos de la formation ***************************************/
+#smile {
+    height: 21px;
+    border-radius: 50%;
+    margin-left: 5px;
+}
+
+#iris {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    height: 60%;
+    border-radius: 50%;
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+/******************************** page patrimoine informatique *************************************/
+.images-patrimoine {
+    width: 100%;
+    margin-top: 30px;
+}
+
+/******************************* images sur la page competences *************************************/
+.container-langages img{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+}
+
+.container-langages-programmation img,
+#langage-sql{
+    height: 100px;
+    border-radius: 40%;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+#langage-bash{
+    height: 100px;
+    border-radius: 10%;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+#langage-powershell{
+    width: 100px;
+    border-radius: 40%;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+.outil-liste .outil-item .outil-image{
+    height: 100px;
+    border-radius: 50%;
+    margin: 40px 0 30px 0;
+    border: 3px solid #fff;
+    padding: 4px;
+}
+
+/************************************ image de la page d'error *************************************/
+/******************************* image de la plage du plan du site *********************************/
+#cible-a-trouver,
+#error-cible{
+    width: 100%;
+    max-width: 800px;
+    margin: auto;              
+    margin-top: 70px;
+    margin-bottom: 50px;
+}
+
+
+/* ================================================================================================= */
+/*                                      Page d'accueil*/
+/* ================================================================================================= */
+
+.introduction {
+    text-align: center;
+    margin-top: 0px;
+}
+
+.pageAccueil .introduction {
+    margin: 50px 0;
+    padding: 20px 10px;
+    position: relative;
+}
+
+.introduction p{
+    margin-top: 10px;
+    line-height: 2;
+}
+
+/* ================================================================================================ */
+/*                                      A propos de moi*/
+/* ================================================================================================ */
+
+.main-content {
+    padding: 10px 20px;
+}
+
+.reponses {
+    background: linear-gradient(225deg,rgba(2, 0, 40, 1) 0%, rgb(36, 11, 64) 25%, rgb(94, 60, 132)  50%, rgb(154, 96, 220) 75%,rgba(2, 0, 40, 1)  100%);
+    padding: 30px 10px 15px 10px;
+    border-radius: 20px;
+}
+
+.reponses:hover{
+    transform: translate(0, -6px);
+    z-index: -1;
+}
+
+.description{
+    margin: 20px 20px;
+}
+
+.description a {
+    color: white;
+    text-decoration: none;
+}
+
+.description a:hover {
+    color: rgb(247, 209, 21);   
+}
+
+.description h3 {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+.parcours, .parcours-prof {
+    padding: 20px 20px;
+    margin-right: -10px;
+}
+
+.parcours div {
+    margin-top: 4em;
+    text-align: center;
+}
+
+.parcours-prof h2,
+.parcours h2 {
+    text-align: center;
+}
+
+.détail-stage{
+    margin: 40px 0 30px 60px;
+    line-height: 1.5;
+}
+
+.détail-stage h3{
+    font-weight: 900;
+    margin-top: 3em;
+}
+
+.bouton-vers-sites {
+    display: flex;
+    justify-content: space-around;
+    font-size: 14px; /*???*/  
+}
+
+#linkedin,
+#github{
+    margin: 0;
+    margin-bottom: 50px;
+}
+
+.etudes{
+    line-height: 1.5;
+    border: none;
+    background: transparent;
+    position: relative;
+    color: white;
+    overflow: hidden;
+    transition: all .2s;
+    margin: 20px 20px;
+    padding: 20px;
+    font-size: 1.2em;
+    border-radius: 20px;
+}
+
+
+.etudes::after {
+    content: "";
+    width: 1500px;
+    height: 1500px;
+    background: linear-gradient(225deg,rgba(2, 0, 40, 1) 0%, rgb(177, 121, 242) 25%, rgb(94, 60, 132)  50%,rgb(36, 11, 64) 75%,rgba(2, 0, 40, 1)  100%);
+    position: absolute;
+    top: -200px;
+    left: -100px;
+    z-index: -1;
+    transition: all .3s;
+}
+
+.etudes:hover::after {
+    transform: rotate(180deg);  
+}
+
+.etudes:hover {
+    transform: translate(0, -6px);
+}
+
+
+/* =============================================================================================== */
+/*                                  A propos de la formation*/
+/* =============================================================================================== */
+
+.reponses.formation ul { 
+    /* je n'arrive pas à afficher les puces avant les lignes!!! */
+    list-style-position: outside;
+    list-style-type:square;
+    margin-top: 5px;
+}
+
+
+.metier-container {
+    padding-left: 60px;
+    list-style: circle;
+    margin-top: 10px;
+}
+
+#deboucher {
+    margin-top: 30px;
+}
+
+.formation ul li {
+    line-height: 1.5;
+}
+
+#mediaschool {
+    text-align: center;
+    background: linear-gradient(180deg, rgba(250, 176, 5, 1) ,  white);
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-bottom: 50px;
+}
+
+.formation {
+    background: linear-gradient(90deg, white 0%, rgba(47, 215, 255, 1) 40%, rgba(55, 255, 255, 1) 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+    padding-left: 0;
+}
+
+.formation:hover {
+    background: linear-gradient(90deg,  rgba(55, 255, 255, 1) 0%,  rgba(47, 215, 255, 1) 10%, white 80% ) ;
+    -webkit-background-clip: text;
+    color: transparent;
+    /* transition: background-position 0.70s ease; */
+    background-position: 0%;
+    transform: none;
+}
+
+.formation.IRIS{
+    background: linear-gradient(180deg, rgba(250, 176, 5, 1)  0%, rgb(231, 188, 88) 20%, rgba(55, 255, 255, 1) 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+    padding-left: 0;
+}
+
+.h3 {
+    background: linear-gradient(90deg, rgba(55, 255, 255, 1) 10%, rgba(47, 215, 255, 1) 20%, white 70%);
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-top: 20px;
+}
+
+
+/* =================================================================================================*/
+/*                                          PPE*/
+/* ================================================================================================= */
+
+.ppe {
+    background: linear-gradient(180deg, white , rgba(3, 118, 208, 1) );
+    -webkit-background-clip: text;
+    color: transparent;
+    margin: auto;
+}
+
+.ppe-liste{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+}
+
+/* ppe et competences  */
+.ppe-container,
+.IDE-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    position: relative;
+    min-width: 300px;
+}
+
+.ppe-liste .ppe-container:active{
+    cursor: grabbing;
+}
+
+
+.ppe-item{
+    height: 400px;
+    width: 345px;
+    margin: auto;
+    background: white;
+    border-radius: 30%;
+    color: black;
+    padding-top: 25px;
+    margin: 50px 0 25px 0;
+    overflow:  hidden;
+}
+
+.ppe-text {
+    padding: 20px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.h4,
+.ppe-h3,
+.h4+p{
+    text-align: center;
+}
+
+.h4{
+    margin-bottom: 4px;
+}
+
+.image-langages{
+    position: relative;
+}
+
+.opacity-image{
+    background-image: url("../images_portfolio/creation-application-mobile_1.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    width: 360px;
+    height: 250px;
+    opacity: 0.7;
+}
+
+.szoveg{
+    color: rgb(24, 79, 24);
+    /* absolute par rapport au parent direct!! */
+    position: absolute;
+    text-align: center;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    top: 0;
+    padding-top: 10px;
+    /* padding-left: 10px; */ 
+}
+
+.szoveg p{
+    padding-left: 20px;
+    line-height: 1.5;
+    font-size: x-large;
+    font-weight: 600;
+    text-decoration: underline;
+    opacity: 1;
+}
+.szoveg ul li{
+    list-style:none;
+    padding-left: 30px;
+    line-height: 1.5;
+    font-weight: 600;
+}
+
+
+/* ****************************** Affichement le carousel de differents projets ********************/
+
+/********************************************* Première projet *************************************/
+#pp1 .h4 + p{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#pp1 .szoveg{
+    margin-top: 30px;
+}
+
+/********************************************* Deuxième projet *************************************/
+#pp2 .h4 + p,
+#pp3 .h4 + p{
+    margin-top: 20px;
+}
+
+#pp2 .opacity-image{
+    background-image: url("../images_portfolio/e_commerce.webp");
+    margin-top: 20px;
+    opacity: 0.9;
+}
+
+#pp2 .szoveg,
+#pp3 .szoveg,
+#pp4 .szoveg{
+    color: blue;
+    margin-left: 20px;
+}
+
+/***************************************** Troisième projet ******************************************/
+#pp3 .opacity-image{
+    background-image: url("../images_portfolio/gestion_de_projet2.png");
+    margin-top: 15px;
+    opacity: 1;
+}
+
+/**************************************** Quatrième projet *****************************************/
+#pp4{
+    height: 430px;
+}
+#pp4 .opacity-image{
+    background-image: url("../images_portfolio/logiciel_de_gestion_de_stock_et_facturation5.png");
+    margin-top: 10px;
+    border-top: 1px solid rgb(180, 175, 175);
+}
+
+/* ================================================================================================== */
+/*                                          veille technologique*/
+/* =========================================================================================== ======*/
+
+#veille{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.article-veille{
+    margin-top: 3em;
+}
+
+#presentation p:first-child{
+    padding-top: 50px;
+}
+
+#presentation p{
+    padding-top: 20px;
+    padding-bottom: 10px;
+} 
+
+#veille-container{
+    margin-bottom: 100px;
+}
+
+#veille-container h2{
+    margin: 100px 0;
+    color: #fff;
+}
+
+.description.veille {
+    background: linear-gradient(225deg,rgb(190, 182, 182) 35%, #D6AD4F  50%, rgb(210, 186, 92) 100%);
+    padding: 5px 20px 30px 20px;
+    margin-top: 20px;
+    border-radius: 30px;
+}
+
+.description.veille:hover {
+    background: linear-gradient(225deg,rgb(226, 157, 20)  35%, #D6AD4F 50%,rgba(208, 208, 208, 1) 100%);
+    transform: translate(-6px, -6px);
+}
+
+/* rgba(229, 152, 0, 1) */
+
+.description.veille h3{
+    padding-top: 5px;
+}
+
+.outils-veille ul {
+    margin-top: 5px;
+    padding-left: 40px;
+    list-style: circle;
+    line-height: 1.5;
+}
+
+#veille-container h2{
+    text-align: center;
+}
+
+
+/* ============================================================================================== */
+/*                              Gestion patrimoine informatique*/
+/* ============================================================================================= */
+
+.patrimoine-informatique{
+    background: linear-gradient(180deg, white 10%, rgb(223, 234, 104) 30%, rgba(200, 214, 50, 1) 50%);
+    -webkit-background-clip: text;
+    color: transparent;
+    padding-left: 0;
+}
+
+.patrimoine-informatique:hover{
+    background: linear-gradient(180deg, rgba(200, 214, 50, 1)  10%, rgb(223, 234, 104) 30%, white 60%);
+    -webkit-background-clip: text;
+    color: transparent;
+    transform: translate(0, 0);
+}
+
+.patrimoine-informatique ul{
+    margin-top: 3px;
+}
+
+.patrimoine-informatique ul li{
+    line-height: 1.3;
+    padding-left: 35px;
+}
+
+.h3.patrimoine-informatique{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.btn-patrimoine{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+#btn-GLPI{
+    margin-left: 25px;
+}
+
+#btn-OCS{
+    margin-right: 25px;
+}
+
+#OCS-Inventory{
+    margin-bottom: 3em;
+}
+
+
+/* ============================================================================================== */
+/*                                              Compétences*/
+/* ============================================================================================= */
+#carousel{
+    margin-top: 70px;
+    margin-bottom: 70px;
+    padding: 0;
+}
+
+.presentation-competences {
+    margin: 50px 0 50px 0;
+} 
+
+.presentation-competences p::first-letter{
+    margin-left: 20px; 
+}
+
+.presentation-competences p{
+    background: linear-gradient(225deg, white 40%, rgb(85, 165, 227)   70%, rgba(3, 118, 208, 1) 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.presentation-competences p:hover{
+    background: linear-gradient(225deg, rgba(3, 118, 208, 1) 0%, rgb(85, 165, 227)   50%, white 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: 0.7s ease;
+}
+
+.sub-description{
+    text-align: center;
+}
+
+.sub-description p{
+    font-style: italic;
+    background: linear-gradient(180deg, white 0%, rgb(85, 165, 227)   70%, rgba(3, 118, 208, 1) 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.langages h4{
+   text-align: center;
+   margin: 40px 0 30px 0;
+   color: rgba(3, 118, 208, 1);
+   text-shadow: rgb(245, 242, 242) 4px 0 20px;
+}
+
+.container-langages{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 4em 0 6em 0;
+}
+
+.container-langages-programmation{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 4em 0 6em 0;
+}
+
+.container-langages-bdd{
+    display: flex;
+    justify-content: center;
+}
+
+.outil-item p{
+    text-align: center;
+    background: linear-gradient(180deg, white 0%, rgb(85, 165, 227)   60%, rgba(3, 118, 208, 1) 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.h4{
+    text-align: center;
+    padding-top: 20px;
+}
+
+.outil-liste{
+    height: 375px;
+}
+
+.outil-liste .outil-item{
+    color: #fff;
+    user-select: none;
+    height: 400px;
+    width: 300px;
+    /* margin: auto; */
+    padding: 10px;
+    margin: 50px 0 25px 0;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    backdrop-filter: blur(30px);
+    background: rgba(3, 118, 208, 0.1);
+    border: 1px solid rgba(3, 118, 208, 0.5);
+    cursor: pointer;
+}
+
+.outil-liste .outil-item:active{
+    cursor: grabbing;
+}
+
+/* =========================================================================================== */
+/*              Carousel des outils/logiciels utilisés sur la page de compétence
+                                            ET
+                         Carousel des projets ppe sur le page ppe*/
+/* ========================================================================================== */
+
+.slider-wrapper{
+    overflow: hidden;
+    /* width: 300px; */
+    max-width: 1100px;
+    user-select: none;
+    margin: 0 10px 55px;
+    padding: 20px 10px;
+}
+
+
+/******************************* bullets en-sous de la carousel *************************************/
+.slider-wrapper .swiper-pagination-bullet {
+    background: #fff;
+    height: 15px;
+    width: 15px;
+    opacity: 0.5;
+}
+
+.slider-wrapper .swiper-pagination-bullet-active{
+    opacity: 1;
+}
+
+/*************************** carousel boutons de la page ppe et compétences **************************/
+.slider-wrapper .swiper-slide-button{
+    color: white;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+    transition: 0.2s ease;
+    display: none;
+}
+
+.slider-wrapper .swiper-slide-button:hover{
+    color: rgba(3, 118, 208, 1);
+}
+
+/*************************** carousel boutons de la page ppe et compétences ***************************/
+
+.swiper-button-next{
+    margin-right: 30px;
+}
+
+.swiper-button-prev{
+    margin-left: 30px;
+}
+
+
+/* ================================================================================================= */
+/*                                              Contact*/
+/* ================================================================================================= */
+
+#remplir {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    margin-bottom: 20px;
+}
+
+#contact-form {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    background: black;
+    color: gray;
+}
+
+#contact-form input {
+    width: 100%;
+    height: 28px;
+    padding: 10px;
+    margin: 15px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    /*box-shadow: 0 2px 2px white;*/
+}
+
+#contact-form textarea {
+    width: 100%;
+    height: 115px;
+    padding: 10px;
+    margin: 15px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 2px white;
+}
+
+input, textarea {
+    text-shadow: 0px 2px 5px gray;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9rem;
+}
+
+.obligatoire {
+    font-size: 10px;
+    color: white;
+    margin-bottom: 30px;
+}
+
+#submit {
+    background: rgba(190, 71, 71, 1);
+    color: white;
+    text-align: center;
+    width: 100px;
+    border: none;
+    padding: 0px 20px;
+    cursor: pointer;
+    transition: background 0.3s ease; /*??*/
+}
+
+#submit:hover {
+    background: rgb(217, 70, 70);
+}
+
+#envoyer{
+    margin-top: 50px;
+    margin-bottom: 0;
+}
+
+#main-contact {
+    margin-bottom: 100px;
+}
+
+.text-success{
+    color: rgb(5, 225, 5);
+    
+}
+
+.text-danger{
+    color: red;
+}
+
+.megfelelo{
+    /* outline-color: rgb(23, 161, 23); */
+    outline: 0.1rem solid rgb(23, 161, 23);
+    outline-offset: 0.2rem;
+}
+
+.nem-megfelelo{
+    /* outline-color: red; */
+    outline: 0.1rem solid rgb(185, 26, 26);
+    outline-offset: 0.2rem;
+}
+
+/******************************************** Checkbox **********************************************/
+
+.costum-check input{
+    display: none;
+}
+
+.costum-check label {
+    position: relative;
+    color: white;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    min-width: 300px;
+    margin-left: 10px;
+  }
+
+.costum-check input + label::before{
+    content: "";
+    display: block;
+    width: 1rem; /* 8px */
+    height: 1rem;
+    background-color: #fff;
+    margin-right: 0.5rem;
+    line-height: 1rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+.costum-check input:checked + label::before{
+    content: "X";
+    color: black;
+    outline: 0.1rem solid rgb(23, 161, 23);
+    outline-offset: 0.2rem;
+}
+
+.costum-check label:last-child{
+    margin-left: 30px;
+}
+
+label a{
+    text-decoration: none;
+    color: white;
+    font-style: italic;
+    font-weight: 900;
+  }
+  
+  label a:hover{
+    text-decoration: underline;
+  }
+
+
+/* ================================================================================================= */
+/*                                          FOOTER*/
+/* ================================================================================================= */
+
+footer {
+    /* position: relative; */
+    left: 0;
+    top: 0;
+    width: 100%;
+    font-size: 14px;
+    margin: auto;
+    padding: 30px;
+    padding-bottom: 50px;
+    background-color: black;
+    color: white;
+    border-top: 1px solid gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer div{
+    margin: 10px 0 10px 0;
+}
+
+.fa-copyright {
+    margin-right: 10px;
+}
+
+.container-footer {
+    display: flex;
+    /* megnezni a kulonbseget a em es rem kozott!!!!
+    kiszelesiteni a nagyobb képernyöre */ 
+    gap: 3rem;
+}
+
+.container-footer a{
+    color: white;
+    text-decoration: none;
+} 
+
+.container-footer a:hover{
+    text-decoration: underline;
+}
+
+.icons a{
+    display: inline-flex;
+    margin-left: 10px;
+    color: white;
+    text-decoration: none;
+    width: 30px;
+    margin-top: 20px;
+}
+
+
+
+
+

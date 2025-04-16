@@ -1,0 +1,163 @@
+/* ================================================================================= */
+/*                              Les Boutons*/
+/* ================================================================================= */
+
+/********************************* les boutons en générale *******************************/
+
+.boutons {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+.decouvrir{
+    border: none;
+    background: transparent;
+    position: relative;
+    border-radius: 30px;
+    padding: 10px 15px;
+    margin-top: 30px;
+    margin-bottom: 100px;
+    color: white;
+    cursor: pointer;
+    overflow: hidden;
+    /* a gomb felemelkedéséhez */
+    transition: all .2s;
+    box-shadow: 0px -0px 0px 0px rgba(235, 166, 166, .5), 0px 0px 0px 0px rgb(190, 71, 71, .5);
+}
+
+.decouvrir::after {
+    content: "";
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(225deg, rgb(121, 6, 6) 0%, rgba(235, 166, 166, 1)  80%, rgb(160, 43, 43, 1)  100%);
+    position: absolute;
+    top: -100px;
+    left: -100px;
+    z-index: -1;
+    transition: all .5s;
+}
+
+.decouvrir:hover::after {
+    transform: rotate(150deg);
+}
+
+.decouvrir:hover {
+    transform: translate(0, -6px);
+    box-shadow: 2px -2px 5px 0px rgba(235, 166, 166, 1), -5px 5px 10px 0px rgb(190, 71, 71, 1);
+}
+
+
+/*************************** bouton de la page à propos de moi **************************************/
+
+.decouvrir.savoir-plus::after {
+    background: linear-gradient(225deg, rgb(52, 21, 88) 30%, rgb(113, 86, 86)  60%, rgba(2, 0, 40, 1)  100%);
+    margin-top: 15px;
+}
+
+.decouvrir.savoir-plus:hover {
+    transform: translate(0, -6px);
+    box-shadow: 2px -2px 5px 0px rgba(205, 99, 226, 1), -5px 5px 10px 0px rgba(92, 44, 123, 1);
+}
+
+#CV {
+    margin-bottom: -90px;
+}
+
+
+/**************************** bouton de la page à propos de la formation *******************************/
+
+.bts {
+    background: linear-gradient(225deg, rgba(40, 172, 172, 1) 30%, rgb(218, 179, 179)  60%, rgba(12, 109, 109, 1)  100%);
+    margin-top: 50px;
+}
+
+.bts.IRIS{
+    background: linear-gradient(225deg, rgba(40, 172, 172, 1) 30%, rgb(231, 188, 88)  60%, rgba(12, 109, 109, 1)  100%);
+    margin-top: 50px;
+}
+
+.decouvrir.savoir-plus.bts:hover{
+    transform: translate(0, -6px);
+    box-shadow: 2px -2px 5px 0px rgba(55, 255, 255, 1), -5px 5px 10px 0px rgba(47, 215, 255, 1);
+}
+
+
+/******************************* boutons de la page ppe ******************************************/
+
+.decouvrir.savoir-plus.projets{
+    background: linear-gradient(205deg, rgb(47, 40, 179) 20%, rgba(22, 56, 104, 1)  45%, rgba(3, 118, 208, 1)  80%);
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.decouvrir.savoir-plus.projets::after{
+    background: linear-gradient(205deg, rgba(3, 118, 208, 1) 20%, rgba(22, 56, 104, 1)  45%, rgb(47, 40, 179)  80%);
+}
+
+.decouvrir.savoir-plus.projets:hover{
+    box-shadow: 2px -2px 5px 0px rgba(3, 118, 208, 1), -5px 5px 10px 0px rgba(22, 56, 104, 1);
+}
+
+
+/************************ bouton de la page gestion patrimoine informatique *****************************/
+
+.decouvrir.savoir-plus.patrimoine-informatique{
+    background: linear-gradient(200deg, rgb(26, 60, 120) 30%, rgba(200, 214, 50, 1)   60%, rgba(22, 56, 104, 1)  80%);
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color: white;
+    padding: 10px 15px;
+}
+
+.decouvrir.savoir-plus.patrimoine-informatique:hover{
+    transform: translate(0, -6px);
+    box-shadow: 2px -2px 5px 0px rgb(219, 227, 125) , -5px 5px 10px 0px rgba(200, 214, 50, 1) ;
+}
+
+
+/************************************* bouton de la page compétences *****************************/
+
+.decouvrir.savoir-plus.competences{
+    background: linear-gradient(205deg, rgba(2, 0, 40, 1) 30%, rgba(22, 56, 104, 1)  60%, rgba(3, 118, 208, 1)  80%);
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color: white;
+    padding: 10px 15px;
+}
+
+.decouvrir.savoir-plus.competences:hover{
+    transform: translate(0, -6px);
+    box-shadow: 2px -2px 5px 0px rgba(3, 118, 208, 1), -5px 5px 10px 0px rgba(22, 56, 104, 1) ;
+}
+
+
+/************************************ bouton de la page erreur *************************/
+
+#btn-error{
+    border-radius: 30px;
+    padding: 10px;
+    margin: 70px 0 100px 0;
+    outline: none;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+    color: rgb(55, 52, 52);
+    background: linear-gradient(205deg, white 10%, rgb(188, 84, 84)  30%, rgb(209, 45, 45) 80%);
+    /* background-color: rgb(188, 84, 84); */
+}
+
+#btn-error:hover{
+    transform: translate(0, -6px);
+    background: linear-gradient(205deg, rgb(209, 45, 45) 10%, rgb(188, 84, 84)  30%, white 100%);
+    box-shadow: 2px -2px 5px 0px black, -5px 5px 10px 0px grey ;
+    transition: 0.5s ease;
+}
+
+
+/*********************************** bouton de la page Contact ***********************************/
+
+#envoyer{
+    background: linear-gradient(225deg, rgb(121, 6, 6) 0%, rgba(235, 166, 166, 1)  80%, rgb(160, 43, 43, 1)  100%);
+}
