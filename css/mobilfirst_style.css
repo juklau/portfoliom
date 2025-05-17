@@ -6,12 +6,12 @@
 /* ================================================================================================= */
 /*                                      Pour tous les pages */
 /* ================================================================================================= */
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box; 
 }
-
 
 
 /* ================================================================================================ */
@@ -49,6 +49,7 @@ body {
     padding: 0;
     margin: 0;
     width: 100%;
+    display: inline-block;
 }
 
 
@@ -61,6 +62,7 @@ body {
 .oldal-fejlec-accueil h1,
 .oldal-fejlec-propos-moi h1,
 .oldal-fejlec-formation h1,
+.oldal-fejlec-stage1 h1,
 .oldal-fejlec-ppe h1,
 .oldal-fejlec-veille-technologique h1,
 .oldal-fejlec-competences h1,
@@ -74,12 +76,17 @@ body {
 
 .oldal-fejlec-ppe{
     font-size: 26px;
-    font-weight: bold;
+}
+
+.oldal-fejlec-stage1 h1{
+    color: #11100f;
+    margin-block-end: auto;
+    margin-top: 20px;
 }
 
 .oldal-fejlec-veille-technologique h1{
     color: rgb(210, 186, 92);
-    margin-top: 10px;
+    /* margin-top: 10px; */
     margin-left: 100px;
 }
 
@@ -87,16 +94,17 @@ body {
     background: linear-gradient(180deg, white 20%, rgb(223, 234, 104) 50%, rgba(200, 214, 50, 1) 50%);
     -webkit-background-clip: text;
     color: transparent;
-    padding-top: 20px;
+    padding-top: 120px;
 }
 
 .oldal-fejlec-contact h1{
     justify-content: flex-start;
-    margin-top: 50px;
+    margin-top: 200px;
 }
 
-p {
-    font-size: 13px;
+p,
+span{
+    font-size: 16px;
 }
 
 .description p {
@@ -106,6 +114,15 @@ p {
 /* sorbekezdes paragrafusonkent */
 .description p::first-letter{
     margin-left: 20px;
+}
+
+h3{
+    font-size: 25px;
+}
+
+h4,
+h5{
+    font-size: 20px;
 }
 
 /********************* sur la page gestion_patrimoine_informatique *********************************/
@@ -120,7 +137,7 @@ p {
 }
 
 ul li {
-    font-size: 13px;
+    font-size: 15px;
 }
 
 .veille-html {
@@ -135,6 +152,7 @@ ul li {
 .oldal-fejlec-accueil,
 .oldal-fejlec-propos-moi,
 .oldal-fejlec-formation,
+.oldal-fejlec-stage1,
 .oldal-fejlec-ppe,
 .oldal-fejlec-veille-technologique,
 .oldal-fejlec-competences,
@@ -145,20 +163,20 @@ ul li {
     position: relative;
      /* novelni a magassagot es a szelesseget, amikor majd szelesitem a kepernyot */
     width: 100%;
-    min-height: 350px;
+    min-height: 450px;
     object-fit: cover;
     object-position: center;
     /* height: 437px; */
     background-image: url("../images_portfolio/background1.jpg");
     background-repeat: no-repeat;
+     background-position: center bottom;
     /* background-position-y: -39px; */
     margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 0;
-    /* margin-block-start: 80px; */
+    margin-top: 100px;
     margin-bottom: 50px;
 
     /* afin d'image d'arrière-plan soit au centre et fixe sa taille quelle que soit 
@@ -170,12 +188,21 @@ ul li {
     background-size:cover;
 }
 
+#veille{
+    background-position-x: -150px;
+    padding-top: 140px;
+}
+
 .oldal-fejlec-propos-moi{
     background-image: url("../images_portfolio/background2.jpg");
 }
 
 .oldal-fejlec-formation{
     background-image: url("../images_portfolio/background3.jpg");
+}
+
+.oldal-fejlec-stage1{
+    background-image: url("../images__portfolio_vrai/background_stage.png");
 }
 
 .oldal-fejlec-ppe{
@@ -233,6 +260,7 @@ ul li {
 .oldal-fejlec-accueil::after,
 .oldal-fejlec-propos-moi::after,
 .oldal-fejlec-formation::after,
+.oldal-fejlec-stage1::after,
 .oldal-fejlec-ppe::after,
 .oldal-fejlec-veille-technologique::after,
 .oldal-fejlec-patrimoine-informatique::after,
@@ -258,6 +286,13 @@ ul li {
     content: "source: https://fr.pngtree.com";
 }
 
+.oldal-fejlec-stage1::after{
+    content: "source: https://www.jeunes-bfc.fr/categorie-a-page/categorie-a1/trouver-un-stage/";
+    color: black;
+    top: 87%;
+    left: 70%;
+}
+
 .oldal-fejlec-ppe::after{
     font-size: 0.5em;
 }
@@ -277,6 +312,7 @@ ul li {
 .oldal-fejlec-accueil:hover::after,
 .oldal-fejlec-propos-moi:hover::after,
 .oldal-fejlec-formation:hover::after,
+.oldal-fejlec-stage1:hover::after,
 .oldal-fejlec-ppe:hover::after,
 .oldal-fejlec-veille-technologique:hover::after,
 .oldal-fejlec-patrimoine-informatique:hover::after,
@@ -287,7 +323,8 @@ ul li {
 
 /************************************** AUTRE IMAGES **********************************************/
 
-/************************************* a propos de moi ********************************************/
+/************************************* page a propos de moi ********************************************/
+
 #moi {
     width: 35%;
     min-width: 100px;
@@ -302,7 +339,8 @@ ul li {
     z-index: 10;
 }
 
-/********************************** a propos de la formation ***************************************/
+/********************************** page a propos de la formation ***************************************/
+
 #smile {
     height: 21px;
     border-radius: 50%;
@@ -320,16 +358,19 @@ ul li {
 }
 
 /******************************** page patrimoine informatique *************************************/
+
 .images-patrimoine {
     width: 100%;
     margin-top: 30px;
 }
 
-/******************************* images sur la page competences *************************************/
+/************************************* page competences *************************************/
+
 .container-langages img{
     height: 80px;
     width: 80px;
     border-radius: 50%;
+    margin: 10px;
 }
 
 .container-langages-programmation img,
@@ -362,8 +403,9 @@ ul li {
     padding: 4px;
 }
 
-/************************************ image de la page d'error *************************************/
-/******************************* image de la plage du plan du site *********************************/
+/*************************************** page d'error *************************************/
+/***********************************plage du plan du site *********************************/
+
 #cible-a-trouver,
 #error-cible{
     width: 100%;
@@ -377,6 +419,10 @@ ul li {
 /* ================================================================================================= */
 /*                                      Page d'accueil*/
 /* ================================================================================================= */
+
+.pageAccueil{
+    padding-top: 100px;
+}
 
 .introduction {
     text-align: center;
@@ -454,7 +500,8 @@ ul li {
 
 .détail-stage h3{
     font-weight: 900;
-    margin-top: 3em;
+    margin: 3em 0 1.5em 0;
+    text-decoration: underline;
 }
 
 .bouton-vers-sites {
@@ -483,7 +530,6 @@ ul li {
     border-radius: 20px;
 }
 
-
 .etudes::after {
     content: "";
     width: 1500px;
@@ -504,22 +550,17 @@ ul li {
     transform: translate(0, -6px);
 }
 
+#parcours-professionnel,
+#parcours-scolaires{
+    padding-top: 100px;
+}
 
 /* =============================================================================================== */
 /*                                  A propos de la formation*/
 /* =============================================================================================== */
 
-.reponses.formation ul { 
-    /* je n'arrive pas à afficher les puces avant les lignes!!! */
-    list-style-position: outside;
-    list-style-type:square;
-    margin-top: 5px;
-}
-
-
 .metier-container {
-    padding-left: 60px;
-    list-style: circle;
+    padding-left: 15px;
     margin-top: 10px;
 }
 
@@ -569,6 +610,45 @@ ul li {
     margin-top: 20px;
 }
 
+/* =================================================================================================*/
+/*                                          Stage1*/
+/* ================================================================================================= */
+
+#bonjour{
+    margin-bottom: 2em;
+}
+
+#bonjour::first-letter{
+    margin-left: 0;
+}
+
+.description.stage{
+    line-height: 1.5;
+}
+
+.description.stage > ul > li{
+    list-style: none;
+} 
+
+.description.stage > ul > li > p{
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+}
+
+.description.stage > ul > li > span{
+    text-decoration: underline;
+}
+
+.signature{
+    text-align:center;
+    margin-left: 100px;
+    margin-bottom: 70px;
+}
+
+#CV-stage:hover,
+#contact-stage:hover{
+    color: red;
+}
 
 /* =================================================================================================*/
 /*                                          PPE*/
@@ -603,9 +683,8 @@ ul li {
     cursor: grabbing;
 }
 
-
 .ppe-item{
-    height: 400px;
+    height: 420px;
     width: 345px;
     margin: auto;
     background: white;
@@ -618,7 +697,7 @@ ul li {
 
 .ppe-text {
     padding: 20px;
-    padding-bottom: 10px;
+    padding-bottom: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -630,12 +709,9 @@ ul li {
     text-align: center;
 }
 
-.h4{
-    margin-bottom: 4px;
-}
-
 .image-langages{
     position: relative;
+    margin-top: -10px;
 }
 
 .opacity-image{
@@ -681,6 +757,7 @@ ul li {
 /* ****************************** Affichement le carousel de differents projets ********************/
 
 /********************************************* Première projet *************************************/
+
 #pp1 .h4 + p{
     margin-top: 20px;
     margin-bottom: 20px;
@@ -691,6 +768,7 @@ ul li {
 }
 
 /********************************************* Deuxième projet *************************************/
+
 #pp2 .h4 + p,
 #pp3 .h4 + p{
     margin-top: 20px;
@@ -710,6 +788,7 @@ ul li {
 }
 
 /***************************************** Troisième projet ******************************************/
+
 #pp3 .opacity-image{
     background-image: url("../images_portfolio/gestion_de_projet2.png");
     margin-top: 15px;
@@ -717,6 +796,7 @@ ul li {
 }
 
 /**************************************** Quatrième projet *****************************************/
+
 #pp4{
     height: 430px;
 }
@@ -777,15 +857,14 @@ ul li {
 
 .outils-veille ul {
     margin-top: 5px;
-    padding-left: 40px;
-    list-style: circle;
+    padding-left: 20px;
     line-height: 1.5;
+    list-style: none;
 }
 
 #veille-container h2{
     text-align: center;
 }
-
 
 /* ============================================================================================== */
 /*                              Gestion patrimoine informatique*/
@@ -837,14 +916,19 @@ ul li {
     margin-bottom: 3em;
 }
 
+#GLPI{
+    padding-top: 70px;
+}
 
 /* ============================================================================================== */
 /*                                              Compétences*/
 /* ============================================================================================= */
+
 #carousel{
     margin-top: 70px;
     margin-bottom: 70px;
     padding: 0;
+    padding-top: 80px;
 }
 
 .presentation-competences {
@@ -888,8 +972,8 @@ ul li {
 
 .container-langages{
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
     margin: 4em 0 6em 0;
 }
@@ -915,7 +999,8 @@ ul li {
 
 .h4{
     text-align: center;
-    padding-top: 20px;
+    padding-top: 10px;
+    margin-bottom: 4px;
 }
 
 .outil-liste{
@@ -945,6 +1030,33 @@ ul li {
     cursor: grabbing;
 }
 
+#langages-pratiqués{
+    padding-top: 70px;
+}
+
+/* ================================= Flipper les images de langages ============================ */
+
+.flip-box{
+    background-color: white;
+    border: 1px solid #f1f1f1;
+    border-radius: 40%;  
+    margin: 30px 20px; 
+}
+
+.flip-box-inner{
+    position: relative;
+    transition: transform 2s;
+    transform-style: preserve-3d;
+}
+
+.flip-box-inner.rotate{
+    transform: rotateY(360deg);
+}
+
+#python{
+    margin-bottom: 30px;
+}
+
 /* =========================================================================================== */
 /*              Carousel des outils/logiciels utilisés sur la page de compétence
                                             ET
@@ -960,8 +1072,8 @@ ul li {
     padding: 20px 10px;
 }
 
-
 /******************************* bullets en-sous de la carousel *************************************/
+
 .slider-wrapper .swiper-pagination-bullet {
     background: #fff;
     height: 15px;
@@ -974,6 +1086,7 @@ ul li {
 }
 
 /*************************** carousel boutons de la page ppe et compétences **************************/
+
 .slider-wrapper .swiper-slide-button{
     color: white;
     height: 30px;
@@ -997,7 +1110,6 @@ ul li {
 .swiper-button-prev{
     margin-left: 30px;
 }
-
 
 /* ================================================================================================= */
 /*                                              Contact*/
@@ -1023,7 +1135,7 @@ ul li {
     width: 100%;
     height: 28px;
     padding: 10px;
-    margin: 15px 0;
+     margin: 15px 0 8px 0;
     border: 1px solid #ddd;
     border-radius: 5px;
     /*box-shadow: 0 2px 2px white;*/
@@ -1080,7 +1192,6 @@ input, textarea {
 
 .text-success{
     color: rgb(5, 225, 5);
-    
 }
 
 .text-danger{
@@ -1115,7 +1226,7 @@ input, textarea {
     margin-left: 10px;
   }
 
-.costum-check input + label::before{
+#egyetertes + label::before{
     content: "";
     display: block;
     width: 1rem; /* 8px */
@@ -1125,9 +1236,10 @@ input, textarea {
     line-height: 1rem;
     text-align: center;
     font-weight: 700;
+     /* il ne faut pas border, car le background exterieur est noir! */
 }
 
-.costum-check input:checked + label::before{
+#egyetertes:checked + label::before{
     content: "X";
     color: black;
     outline: 0.1rem solid rgb(23, 161, 23);
@@ -1149,7 +1261,6 @@ label a{
     text-decoration: underline;
   }
 
-
 /* ================================================================================================= */
 /*                                          FOOTER*/
 /* ================================================================================================= */
@@ -1161,8 +1272,7 @@ footer {
     width: 100%;
     font-size: 14px;
     margin: auto;
-    padding: 30px;
-    padding-bottom: 50px;
+    padding: 30px 10px 50px 10px;
     background-color: black;
     color: white;
     border-top: 1px solid gray;

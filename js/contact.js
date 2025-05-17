@@ -211,6 +211,7 @@ document.getElementById("contact-form").addEventListener("submit", function(e) {
         };
         document.getElementById("message").value = ""; 
 
+        //ne fonctionne pas encore
         // document.getElementById("egyetertes").value = "";
     }else{
         console.log("il ne fonctionne pas");

@@ -11,19 +11,43 @@ const closeMenuBtn = document.querySelector(".close-menu-btn");
 
 [openMenuBtn, closeMenuBtn].forEach((btn) => {
     btn.addEventListener("click", () => {
-        console.log("on a appuyé sur le bouton")
+        //console.log("on a appuyé sur le bouton")
         menu.classList.toggle("open");
-        menu.computedStyleMap.transition = "transform 0.5s ease";
+        menu.style.transition = "transform 0.5s ease";
     });
 });
 
 menu.addEventListener("transitionend", function() {
-    this.removeAttribute("style");
+    this.removeAttribute("style"); // Supprime les styles après la transition
 });
 
 menu.querySelectorAll(".dropdown .icon-link > i").forEach((arrow) => {
     arrow.addEventListener("click", function(){
         this.closest(".dropdown").classList.toggle("active");
+    });
+});
+
+// fermer le menu dropdown en cliquant ailleurs
+document.addEventListener("click", function(event) {
+    //Vérifier si le clic est à l'extérieur du menu et des boutons
+    //(event.target) ==> pour obtenir l'élément exact qui a été cliqué
+    if (!menu.contains(event.target) && !openMenuBtn.contains(event.target)) {
+        menu.classList.remove("open");
+    }
+});
+
+
+/* ======================================================================================== */
+/*                                     Page compétences*/
+/* ======================================================================================== */
+
+let flipBoxes = document.querySelectorAll(".flip-box");
+
+//mettre un événement "mouseover"=> hogy csak *1 forduljon meg
+//az :hover-el *2 fordul
+flipBoxes.forEach(flipBoxe => {
+     flipBoxe.addEventListener("mouseover", function(){
+        this.querySelector(".flip-box-inner").classList.add("rotate");
     });
 });
 
@@ -65,29 +89,29 @@ if((document.getElementById("github")) !== null) {
     }
 };
 
-//btn vers LinkedIn
+//btn vers LinkedIn dans une nouvelle fenêtre
 if((document.getElementById("linkedin")) !== null) {
     document.getElementById("linkedin").onclick = function(){
-            window.location.href = "https://www.linkedin.com/in/klaudia-juhasz-a165002bb/";
+            window.open("https://www.linkedin.com/in/klaudia-juhasz-a165002bb/", "_blank");
+            // window.location.href = "https://www.linkedin.com/in/klaudia-juhasz-a165002bb/"; //il ouvre dans la même fenêtre
     }
 };
-
 
 
 /*=============== Utilisation des boutons de la page à propos de la formation ==================*/
 
 
-//btn vers la documentation sur BTS SIO SLAM
+//btn vers la documentation sur BTS SIO SLAM dans une nouvelle fenêtre
 if((document.getElementById("btn-BTS-SIO-SLAM")) !== null) {
     document.getElementById("btn-BTS-SIO-SLAM").onclick = function(){
-            window.location.href = "https://www.onisep.fr/ressources/univers-formation/formations/post-bac/bts-services-informatiques-aux-organisations-option-b-solutions-logicielles-et-applications-metiers";
+            window.open("https://www.onisep.fr/ressources/univers-formation/formations/post-bac/bts-services-informatiques-aux-organisations-option-b-solutions-logicielles-et-applications-metiers", "_blank");
     }
 };
 
-//btn vers l'école IRIS MediaSchool Nice
+//btn vers l'école IRIS MediaSchool Nice dans une nouvelle fenêtre
 if((document.getElementById("btn-IRIS")) !== null) {
     document.getElementById("btn-IRIS").onclick = function(){
-            window.location.href = "https://ecoleiris.fr/nice/ecole";
+            window.open("https://ecoleiris.fr/nice/ecole", "_blank");
     }
 };
 
