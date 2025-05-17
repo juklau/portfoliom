@@ -229,7 +229,7 @@ ul li {
 }
 
 .oldal-fejlec-mentions-legales{
-    background-image: url("../images_portfolio/mentions-legales3.png");
+    background-image: url("../images_portfolio/background_mentions_legales.png");
 } 
 
 .veille-sujet{
@@ -1293,7 +1293,7 @@ footer div{
     display: flex;
     /* megnezni a kulonbseget a em es rem kozott!!!!
     kiszelesiteni a nagyobb képernyöre */ 
-    gap: 3rem;
+    gap: 2rem;
 }
 
 .container-footer a{

@@ -68,12 +68,14 @@
     .oldal-fejlec-accueil,
     .oldal-fejlec-propos-moi,
     .oldal-fejlec-formation,
+    .oldal-fejlec-stage1,
     .oldal-fejlec-ppe,
     .oldal-fejlec-veille-technologique,
     .oldal-fejlec-competences,
     .oldal-fejlec-patrimoine-informatique,
     .oldal-fejlec-contact{
         min-height: 550px;
+        margin-top: 170px;
     }
 
     .oldal-fejlec-mentions-legales{
@@ -415,6 +417,11 @@
     /* ======================================================================================== */
     /*                               Page d'erreur */
     /* ======================================================================================== */
+    
+    .main-content.plan-site,
+    .main-content.error-page{
+        padding-top: 100px;
+    }
 
     .fejlec.oups{
         margin-left: 30px;
