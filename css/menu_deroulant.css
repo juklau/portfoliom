@@ -19,7 +19,8 @@
     z-index: 99999;
     display:block;
     align-items: center;
-    font-family: "Bebas Neue", sans-serif;
+    font-family: "Relaway", sans-serif;
+    /* font-family: "Bebas Neue", sans-serif; */
 }
 
 .fomenupont{
@@ -63,7 +64,7 @@
 .header .menu a{
     text-decoration: none;
     text-transform: capitalize;
-    font-size: 16px;
+    font-size: 12px;
     color: white;
     line-height: 1.5;
     display: inline-flex;
@@ -154,15 +155,6 @@
     padding: 5px 0;
 }
 
-/* lehet hogy nem kell */
-/* .header .menu .sub-menu .icon-link i{
-    transform: rotate(-90deg);
-    right: 5px;
-} */
-
-/* .header .menu li:first-child{
-    border-top: 1px solid gray;
-} */
 
 /* lehet hogy ez nem kell */
 .header .menu > ul > li > a{
@@ -277,7 +269,7 @@
 **********************************************************************************************/
 
 
-@media(min-width:768px){
+@media(min-width:900px){
    
     .header{
         left: 0;
