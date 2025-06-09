@@ -14,11 +14,6 @@
 
 @media screen and (min-width: 550px){
 
-    .slider-wrapper .swiper-slide-button{
-        display: block;
-        margin-top: -70px;
-    }
-
     .oldal-fejlec-veille-technologique h1{
         margin-top: 60px;
         margin-left: 140px;
@@ -286,7 +281,8 @@
         margin-left: 40px;
     }
 
-    .description h3{
+    .description h3, 
+    .langages h3{
         font-size: 26px;
         margin-top: 3em;
     }
@@ -309,6 +305,11 @@
     /*                                              Compétences*/
     /* ============================================================================================== */
 
+    .carousel.swiper{
+        display: flex;
+        justify-content: center !important;
+    }
+
     .presentation-competences p{
         line-height: 1.5;
     }
@@ -317,6 +318,17 @@
         font-size: 20px;
         margin-top: 7em;
         margin-bottom: 5em;
+    }
+
+    .container-langages img{
+        height: 120px;
+        width: 120px;
+    }
+
+    #langage-bash,
+    #langage-powershell{
+        height: 140px;
+        
     }
 
     .container-langages-programmation{
@@ -532,8 +544,9 @@
     /*                                              Compétences*/
     /* ============================================================================================== */
 
-    .oldal-fejlec-competences h1{
-
+    .slider-wrapper .swiper-slide-button{
+        display: block;
+        margin-top: -70px;
     }
 
     /* =============================================================================================== */

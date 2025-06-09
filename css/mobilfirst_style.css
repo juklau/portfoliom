@@ -366,6 +366,7 @@ ul li {
 
 /************************************* page competences *************************************/
 
+
 .container-langages img{
     height: 80px;
     width: 80px;
@@ -472,7 +473,8 @@ ul li {
     color: rgb(247, 209, 21);   
 }
 
-.description h3 {
+.description h3,
+.langages h3 {
     margin-top: 2em;
     margin-bottom: 2em;
     text-align: center;
@@ -924,11 +926,22 @@ ul li {
 /*                                              Compétences*/
 /* ============================================================================================= */
 
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+
 #carousel{
     margin-top: 70px;
     margin-bottom: 70px;
     padding: 0;
     padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .presentation-competences {
@@ -963,17 +976,17 @@ ul li {
     color: transparent;
 }
 
-.langages h4{
+/* .langages h4{
    text-align: center;
    margin: 40px 0 30px 0;
    color: rgba(3, 118, 208, 1);
    text-shadow: rgb(245, 242, 242) 4px 0 20px;
-}
+} */
 
 .container-langages{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     margin: 4em 0 6em 0;
 }
