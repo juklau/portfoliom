@@ -123,15 +123,6 @@
     display: flex;
 }
 
-/* ez nem biztos hogy kell */
-/* .header .menu > ul > li{
-    display: block;
-} */
-
-/* ez nem biztos hogy kell */
-/* .header .menu > ul > li::not(:last-child){
-    margin-right: 0;
-} */
 
 /**************************** souligne pendant le survole ****************************/
 
@@ -440,7 +431,6 @@
 @media(min-width:900px){
 
     .header{
-        max-width: 1240px;
         margin: auto;
     }
 

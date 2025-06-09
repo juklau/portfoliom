@@ -42,7 +42,6 @@
 
      /*Ajustement global */
     body {
-        max-width: 1240px;
         margin: auto;
         align-items: flex-start;
     }
